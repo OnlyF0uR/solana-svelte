@@ -14,7 +14,7 @@ backpack wallet is also added. So this one is retrieved from the solana-svelte l
 ```svelte
 <script>
 	import { clusterApiUrl } from '@solana/web3.js';
-	import { blockchain } from '@solana-svelte/core';
+	import { blockchain } from 'solana-svelte/core';
 
 	$effect.pre(async () => {
 		const {
@@ -27,7 +27,7 @@ backpack wallet is also added. So this one is retrieved from the solana-svelte l
 			TrustWalletAdapter,
 			MathWalletAdapter
 		} = await import('@solana/wallet-adapter-wallets');
-		const { BackpackWalletAdapter } = await import('@solana-svelte/wallets');
+		const { BackpackWalletAdapter } = await import('solana-svelte/wallets');
 		const network = clusterApiUrl('devnet');
 
 		blockchain.init(network, {
