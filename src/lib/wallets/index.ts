@@ -1,1 +1,1 @@
-export * from './backpack/src';
+export * from './backpack/src/index.js';
